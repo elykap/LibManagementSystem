@@ -1,7 +1,10 @@
+//Main file for the Library Management System. Provides a menu-driven interface for users to interact with library functions.
 #include <iostream>
 #include "Library.h"
 #include "Database.h"
 #include "Utils.h"
+
+//=== Main Menu Options ===
 
 void displayMenu() {
     std::cout<<"\nLibrary Management System\n";
@@ -26,13 +29,15 @@ int main() {
     int choice;
     while (true) {
         displayMenu();
-        std::cin >> choice;
+        std::cin>>choice;
         std::cin.ignore();
 
         if (choice==9) {
             std::cout<<"Saving data and exiting...\n";
             break;
         }
+        
+//=== Book Management ===
 
         switch (choice) {
             case 1: {
@@ -71,6 +76,9 @@ int main() {
                 }
                 break;
             }
+
+//=== User Management ===
+
             case 4: {
                 std::string name;
                 std::cout<<"Enter user name: ";

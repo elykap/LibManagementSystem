@@ -1,3 +1,4 @@
+//Contains unit tests for the Library and Book classes to verify core functionalities.
 #include <iostream>
 #include <cassert>
 #include "Book.h"

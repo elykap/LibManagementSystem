@@ -1,3 +1,4 @@
+//Implements the Database class functions to save and load book and user data for persistence.
 #include "Database.h"
 #include <fstream>
 #include <iostream>
@@ -69,3 +70,5 @@ std::vector<User> Database::loadUsers(const std::string &filename) {
     std::cout<<"Users loaded successfully.\n";
     return users;
 }
+//TODO: Improve error handling for file I/O to ensure graceful program shutdown on failure.
+//TODO: Consider using a database library to improve data persistence and query capabilities.

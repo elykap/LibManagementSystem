@@ -1,3 +1,4 @@
+//Implements the User class functions for managing user details and borrowed books.
 #include "User.h"
 #include <iostream>
 
@@ -11,7 +12,7 @@ std::string User::getName() const {
 int User::getUserID() const {
     return userID;
 }
-
+//Check if the user has already borrowed the book before adding it to avoid duplicates.
 std::vector<Book> User::getBorrowedBooks() const {
     return borrowedBooks;
 }
@@ -25,7 +26,7 @@ void User::borrowBook(Book &book) {
         std::cout<<"Book is already borrowed.\n";
     }
 }
-
+//Verify that the book is in the user's borrowed list before attempting to return it.
 void User::returnBook(const std::string &ISBN) {
     for (size_t i=0; i<borrowedBooks.size(); ++i) {
         if (borrowedBooks[i].getISBN()==ISBN) {

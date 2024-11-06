@@ -1,5 +1,8 @@
+//Implements the Library class functions for managing library collections of books and users.
 #include "Library.h"
 #include <iostream>
+
+//=== Book Management Functions ===
 
 void Library::addBook(const Book &book) {
     books.push_back(book);
@@ -26,6 +29,8 @@ Book* Library::searchBook(const std::string &ISBN) {
     return nullptr;
 }
 
+//=== User Management Functions ===
+
 void Library::registerUser(const User &user) {
     users.push_back(user);
     std::cout<<"User registered successfully.\n";
@@ -40,6 +45,9 @@ User* Library::searchUser(int userID) {
     return nullptr;
 }
 
+//=== Borrow and Return Functions ===
+
+//Check if the user and book exist and if the book is available before allowing borrowing.
 void Library::borrowBook(int userID, const std::string &ISBN) {
     User *user=searchUser(userID);
     Book *book=searchBook(ISBN);

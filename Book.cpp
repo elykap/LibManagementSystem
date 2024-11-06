@@ -1,3 +1,4 @@
+//Implements the Book class functions for managing book details and borrow status.
 #include "Book.h"
 #include <iostream>
 
@@ -15,11 +16,11 @@ std::string Book::getAuthor() const {
 std::string Book::getISBN() const {
     return ISBN;
 }
-
+//Check if the book is currently borrowed to ensure only available books can be borrowed.
 bool Book::getStatus() const {
     return isBorrowed;
 }
-
+//Marks the book as borrowed and updates its status.
 void Book::setStatus(bool borrowed) {
     isBorrowed=borrowed;
 }

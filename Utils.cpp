@@ -1,3 +1,4 @@
+//Implements utility functions for input validation, ID generation, and string manipulation.
 #include "Utils.h"
 #include <algorithm>
 #include <cctype>
