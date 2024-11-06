@@ -24,6 +24,19 @@ Add a graphical user interface (GUI) for easier user interaction.
 Implement advanced search and filtering options for books and users.
 Enhance data persistence with a database (e.g., SQLite) instead of text files.
 Include user authentication to manage different user roles (e.g., admin vs. general user).
+
+## Running Tests
+
+To compile and run the tests, use the following commands in the project directory:
+
+# Compile and run LibraryTest
+g++ LibraryTest.cpp Library.cpp Book.cpp User.cpp Database.cpp Utils.cpp -o LibraryTest
+./LibraryTest
+
+# Compile and run BookTest
+g++ BookTest.cpp Book.cpp -o BookTest
+./BookTest
+
 License
 
 This project is open-source and available under the MIT License.
